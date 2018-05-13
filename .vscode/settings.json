@@ -1,0 +1,10 @@
+{
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "lib": true
+  },
+  "search.exclude": {
+    "lib": true
+  }
+}
