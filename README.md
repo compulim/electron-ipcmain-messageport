@@ -13,6 +13,7 @@ This package is expected to work in pair with [`electron-ipcrenderer-messageport
 # How to use
 
 ```js
+const IPCMainMessagePort = require('electron-ipcmain-messageport');
 const { BrowserWindow, ipcMain } = require('electron');
 const window = new BrowserWindow();
 const messagePort = new IPCMainMessagePort(ipcMain, window, 'channel_name');
