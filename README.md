@@ -8,6 +8,8 @@ Turns Electron [`IPCMain`](https://github.com/electron/electron/blob/master/docs
 
 Instead of learning/using different API for different communication channels, we should unite them into a single interface pattern, either [MessagePort](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort) or [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket).
 
+This package is expected to work in pair with [`electron-ipcrenderer-messageport`](https://npmjs.com/package/electron-ipcrenderer-messageport).
+
 # How to use
 
 ```js
@@ -18,7 +20,7 @@ const messagePort = new IPCMainMessagePort(ipcMain, window, 'channel_name');
 messagePort.on('message', event => {
   // Could be either a string or Buffer
   console.log(event.data);
-};
+});
 
 messagePort.postMessage('Hello, World!');
 ```
